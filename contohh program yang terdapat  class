@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+// Deklarasi struct Mahasiswa
+struct Mahasiswa {
+    char nama[50];
+    int umur;
+    double ipk;
+};
+
+// Deklarasi fungsi untuk menampilkan data mahasiswa
+void tampilMahasiswa(Mahasiswa mhs) {
+    cout << "Nama: " << mhs.nama << endl;
+    cout << "Umur: " << mhs.umur << endl;
+    cout << "IPK: " << mhs.ipk << endl;
+}
+
+int main() {
+    // Deklarasi dan inisialisasi objek mahasiswa
+    Mahasiswa mhs1 = {"Budi", 20, 3.5};
+
+    // Menggunakan pointer untuk mengakses data mahasiswa
+    Mahasiswa *ptrMhs;
+    ptrMhs = &mhs1;
+
+    // Mengubah data mahasiswa melalui pointer
+    strcpy(ptrMhs->nama, "Andi");
+    ptrMhs->umur = 21;
+    ptrMhs->ipk = 3.8;
+
+    // Memanggil fungsi tampilMahasiswa dengan parameter objek mahasiswa
+    tampilMahasiswa(mhs1);
+
+    return 0;
+}
