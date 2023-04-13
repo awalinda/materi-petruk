@@ -1,0 +1,23 @@
+# struct
+
+
+struct Mahasiswa {
+    char nama[50];
+    int umur;
+    double ipk;
+};
+
+#fungsi
+
+void tampilMahasiswa(Mahasiswa mhs) {
+    cout << "Nama: " << mhs.nama << endl;
+    cout << "Umur: " << mhs.umur << endl;
+    cout << "IPK: " << mhs.ipk << endl;
+}
+
+#pointer
+Mahasiswa *ptrMhs;
+ptrMhs = &mhs1;
+
+#fungsi
+strcpy(ptrMhs->nama, "Andi");
